@@ -1,5 +1,6 @@
 import type { FormProps } from '../type/type'
 import GeneratePass from './GeneratePass'
+import passImg from '../images/pass.svg';
 
 const Form = ({ form, errors, onChange, onSubmit }: FormProps) => {
 	const isDisabled = Object.values(form).some(val => val === '') || Object.values(errors).some(err => err !== '')
@@ -8,7 +9,7 @@ const Form = ({ form, errors, onChange, onSubmit }: FormProps) => {
 		<div className='bg-white rounded-[6px] w-full px-6 py-8'>
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
 				<div className='flex justify-center'>
-					<img src='/src/images/pass.svg' alt='Illustration' className='w-auto h-auto' />
+	<img src={passImg} alt="Illustration" className="w-auto h-auto" />
 				</div>
 				<div>
 					<h2 className='text-2xl font-semibold mb-6 text-gray-800'>Add new password</h2>

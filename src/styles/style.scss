@@ -1,11 +1,11 @@
-// === Zmienne kolorów ===
+
 $base-color: #003566;
 $text-color-main: #fec726;
 $text-color-second: #ffd60a;
 $color-dark-blue: #001d3d;
 $color-white: #f8f8ff;
 
-// === Font ===
+
 :root {
 	font-family: 'Quicksand', sans-serif;
 }
@@ -15,7 +15,7 @@ body {
 	overflow-x: hidden;
 }
 
-// === Klasy pomocnicze ===
+
 .bg-dark-blue {
 	background-color: $base-color;
 	color: $color-white;
@@ -25,7 +25,7 @@ body {
 	color: $base-color;
 }
 
-// === Komponent Password ===
+
 .password-item {
 	display: flex;
 	align-items: center;
@@ -37,7 +37,7 @@ body {
 	max-width: 100%;
 	gap: 12px;
 
-	// Przycisk (delete, show)
+
 	button {
 		background: transparent;
 		border: none;
@@ -48,12 +48,12 @@ body {
 		padding: 0;
 	}
 
-	// Ikona po lewej
+
 	.password-icon {
 		margin-right: 12px;
 	}
 
-	// Dane pośrodku
+
 	.password-data {
 		display: flex;
 		flex-direction: column;
@@ -61,7 +61,7 @@ body {
 		flex: 1;
 	}
 
-	// Wrapper na przycisk show z tooltipem
+
 	.password-show-wrapper {
 		position: relative;
 

@@ -1,0 +1,90 @@
+// === Zmienne kolorów ===
+$base-color: #003566;
+$text-color-main: #fec726;
+$text-color-second: #ffd60a;
+$color-dark-blue: #001d3d;
+$color-white: #f8f8ff;
+
+// === Font ===
+:root {
+	font-family: 'Quicksand', sans-serif;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+// === Klasy pomocnicze ===
+.bg-dark-blue {
+	background-color: $base-color;
+	color: $color-white;
+}
+
+.text-dark-blue {
+	color: $base-color;
+}
+
+// === Komponent Password ===
+.password-item {
+	display: flex;
+	align-items: center;
+	border: 1px solid $base-color;
+	padding: 12px;
+	border-radius: 8px;
+	color: $base-color;
+	width: 100%;
+	max-width: 100%;
+	gap: 12px;
+
+	// Przycisk (delete, show)
+	button {
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+	}
+
+	// Ikona po lewej
+	.password-icon {
+		margin-right: 12px;
+	}
+
+	// Dane pośrodku
+	.password-data {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		flex: 1;
+	}
+
+	// Wrapper na przycisk show z tooltipem
+	.password-show-wrapper {
+		position: relative;
+
+		.tooltip {
+			position: absolute;
+			bottom: -24px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #333;
+			color: #fff;
+			padding: 4px 8px;
+			border-radius: 4px;
+			font-size: 12px;
+			white-space: nowrap;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			pointer-events: none;
+			z-index: 10;
+		}
+
+		button:hover + .tooltip,
+		button:focus + .tooltip {
+			opacity: 1;
+		}
+	}
+}

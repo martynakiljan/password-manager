@@ -1,13 +1,7 @@
 import Password from './Password'
-import type { FieldValues } from '../type/type'
+import type { DashboardProps } from '../type/type'
 
-const Passwords = ({
-	passwords,
-	handleDelete,
-}: {
-	passwords: FieldValues[]
-	handleDelete: (website: string) => void
-}) => {
+const Passwords = ({ passwords, handleDelete }: DashboardProps) => {
 	if (passwords.length === 0) {
 		return <p className='text-center text-gray-500 mt-6'>you have no passwords! 😢</p>
 	}

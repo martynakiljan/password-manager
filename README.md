@@ -19,8 +19,11 @@ A simple and responsive password manager built with **Vite**, **React**, **TypeS
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
+## 🌐 Live Demo
+🔗 https://elaborate-yeot-b05283.netlify.app/
 
-📸 Screenshots
+
+##📸 Screenshots
 
 <img width="1391" alt="Zrzut ekranu 2025-07-7 o 16 05 31" src="https://github.com/user-attachments/assets/70913d5a-3baf-4ce0-9693-a288102f1564" />
 

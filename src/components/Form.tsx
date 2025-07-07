@@ -3,6 +3,7 @@ import GeneratePass from './GeneratePass'
 
 const Form = ({ form, errors, onChange, onSubmit }: FormProps) => {
 	const isDisabled = Object.values(form).some(val => val === '') || Object.values(errors).some(err => err !== '')
+
 	return (
 		<div className='bg-white rounded-[6px] w-full px-6 py-8'>
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
@@ -39,7 +40,7 @@ const Form = ({ form, errors, onChange, onSubmit }: FormProps) => {
 								value={form.website}
 								onChange={onChange}
 								className='w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring focus:border-blue-500'
-								placeholder='website'
+								placeholder='www.google.com'
 							/>
 							{errors.website && <p className='text-red-500 text-sm mt-1'>{errors.website}</p>}
 						</div>
@@ -64,12 +65,11 @@ const Form = ({ form, errors, onChange, onSubmit }: FormProps) => {
 							Generate strong Pass:
 						</label>
 						<GeneratePass />
-
 						<button
 							type='submit'
 							disabled={isDisabled}
 							className={`mt-4 w-full font-semibold py-2 px-4 rounded transition 
-		${isDisabled ? 'bg-gray-400 cursor-not-allowed' : 'bg-dark-blue text-white hover:bg-blue-700'}`}>
+		                    ${isDisabled ? 'bg-gray-400 cursor-not-allowed' : 'bg-dark-blue text-white hover:bg-blue-700'}`}>
 							Add Password
 						</button>
 					</form>

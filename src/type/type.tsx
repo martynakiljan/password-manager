@@ -9,3 +9,9 @@ export type FormProps = {
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 	onSubmit: (e: React.FormEvent<HTMLFormElement>) => void
 }
+
+
+export type DashboardProps = {
+	passwords: FieldValues[]
+	handleDelete: (website: string) => void
+}

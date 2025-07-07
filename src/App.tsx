@@ -8,6 +8,7 @@ import { validate } from './assets/validate'
 
 function App() {
 	const [passwords, setPasswords] = useState<FieldValues[]>([])
+
 	const [form, setForm] = useState<FieldValues>({
 		email: '',
 		website: '',
@@ -20,9 +21,9 @@ function App() {
 		password: '',
 	})
 
-const handleDelete = (id: string) => {
-	setPasswords(prev => prev.filter(p => p.id !== id))
-}
+	const handleDelete = (id: string) => {
+		setPasswords(prev => prev.filter(p => p.id !== id))
+	}
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target
@@ -43,7 +44,7 @@ const handleDelete = (id: string) => {
 		if (!hasErrors) {
 			const newEntry = {
 				...form,
-				id: crypto.randomUUID(), 
+				id: crypto.randomUUID(),
 			}
 			setPasswords(prev => [...prev, newEntry])
 			setForm({ email: '', website: '', password: '' })
@@ -53,7 +54,7 @@ const handleDelete = (id: string) => {
 	return (
 		<>
 			<Header />
-			<Form form={form} errors={errors} onChange={handleChange} onSubmit={handleSubmit} />
+			<Form form={form} errors={errors} onChange={handleChange} onSubmit={handleSubmit} id={''} />
 			<Dashboard passwords={passwords} handleDelete={handleDelete} />
 		</>
 	)

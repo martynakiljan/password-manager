@@ -1,11 +1,8 @@
 import { useState } from 'react'
-import type { FieldValues } from '../type/type'
+import type { DashboardProps} from '../type/type'
 import Passwords from './Passwords'
 
-interface DashboardProps {
-	passwords: FieldValues[]
-	handleDelete: (website: string) => void
-}
+
 
 const Dashboard = ({ passwords, handleDelete }: DashboardProps) => {
 	const [searchTerm, setSearchTerm] = useState('')
